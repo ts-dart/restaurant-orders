@@ -4,7 +4,6 @@ import csv
 def analyze_log(path_to_file):
     if file_type(path_to_file) != 'csv':
         raise FileNotFoundError(f"Extensão inválida: '{path_to_file}'")
-
     try:
         with open(path_to_file) as file:
             content = [[i[0], i[1], i[2]] for i in csv.reader(file)]
